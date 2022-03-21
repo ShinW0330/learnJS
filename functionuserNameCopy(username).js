@@ -12,8 +12,8 @@ function userNameCopy (name){
   console.log(name + "입니다.");
 }
 
-userNameCopy('shin');
-userNameCopy('gu');
+userNameCopy('shinwook');
+userNameCopy('shingu');
 userNameCopy('kang');
 userNameCopy('park');
 userNameCopy('jin');
