@@ -56,8 +56,22 @@ console.log(i); // Error !!
 
 
 // 여기에 코드를 작성해 주세요.
+// 1~100 짝수 번호만 
+
+// 1. 
 for(let i = 1; i<= 100 ; i++){
   if(i%2 == 0){
     console.log(i);
   }
+}
+
+// 2.
+for(let i = 1; i<= 50 ; i++){
+    console.log(i*2);
+}
+
+// 3. 
+for(let i = 2; i<= 100 ; i += 2){
+  console.log(i);
+  
 }
