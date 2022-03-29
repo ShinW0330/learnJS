@@ -1,5 +1,6 @@
 /**
  * 유사배열 (Array-Like Object)
+ * getElementsByClassName() 은 HTMLCollection 이라는 유사배열객체를 반환.
  * 여러 개의 값을 담고 있는 배열과 형태는 유사하지만
  * 배열의 메소드는 사용할 수 없는 것들을 가리켜서 유사 배열이라고 한다,. 
  * 
