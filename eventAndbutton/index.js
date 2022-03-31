@@ -5,3 +5,5 @@ const btn = document.querySelector('#myBtn');
 btn.onclick = function() { // 이벤트 핸들러(Event Handler)
 	console.log('Hello Codeit!');
 };
+
+// 이벤트 핸들링
