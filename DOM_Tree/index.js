@@ -38,8 +38,8 @@ console.log(myTag.firstElementChild); // ul태그 의 자식 요소 태그중 �
 console.log(myTag.lastElementChild); 
 
 // 형제 요소 노드
-console.log(myTag.previousElementSibling);
-console.log(myTag.nextElementSibling);
+console.log(myTag.previousElementSibling); // 기준 태그에서 앞에 있는 
+console.log(myTag.nextElementSibling); // 기준 태그에서 다음에 
 
 
 // 기준인 ul 태그의 부모 태그 선택
