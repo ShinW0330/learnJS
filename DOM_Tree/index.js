@@ -44,5 +44,5 @@ console.log(myTag.nextElementSibling); // 기준 태그에서 다음에
 
 // 기준인 ul 태그의 부모 태그 선택
 console.log(myTag.parentElement); 
-
+// DOM 부모 , 자식, 형제 요소 노드 
 //
