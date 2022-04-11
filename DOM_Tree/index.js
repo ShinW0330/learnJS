@@ -47,3 +47,5 @@ console.log(myTag.parentElement);
 // DOM 부모 , 자식, 형제 요소 노드 
 console.log(myTag.parentElement); 
 console.log(myTag.parentElement); 
+console.log(myTag.parentElement); 
+console.log(myTag.parentElement); 
