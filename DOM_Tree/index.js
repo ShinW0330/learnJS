@@ -49,3 +49,5 @@ console.log(myTag.parentElement);
 console.log(myTag.parentElement); 
 console.log(myTag.parentElement); 
 console.log(myTag.parentElement); 
+
+console.log(myTag.parentElement); console.log(myTag.parentElement); 
