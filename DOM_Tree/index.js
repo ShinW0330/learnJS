@@ -46,8 +46,5 @@ console.log(myTag.nextElementSibling); // 기준 태그에서 다음에
 console.log(myTag.parentElement); 
 // DOM 부모 , 자식, 형제 요소 노드 
 console.log(myTag.parentElement); 
-console.log(myTag.parentElement); 
-console.log(myTag.parentElement); 
-console.log(myTag.parentElement); 
 
-console.log(myTag.parentElement); console.log(myTag.parentElement); 
+
