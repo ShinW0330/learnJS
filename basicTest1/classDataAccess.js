@@ -20,3 +20,7 @@ console.log(sin.boneYear);
 
 // 대괄호 표기법 objectName['propertyName']
 console.log(sin['bone Year2']);
+console.log(sin['bone' +'Year2']);
+
+let propertyName = 'name';
+console.log(sin[propertyName]);
