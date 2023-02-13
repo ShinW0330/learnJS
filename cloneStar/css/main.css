@@ -9,18 +9,22 @@ body{
 img{ /* img 는 inline 요소 -> 위아래 값을 가질 수 없는 marggin 과 padding 값을 가질수 없다 . 인라인 요소는 baseline 이라 글자 아래에 작은 공간이 생기기 떄문에 조금 뜬다.  */
   display: block;
 }
-
+a {/* a 태그에 밑줄이 발생하는것을 방지 */
+  text-decoration: none;
+}
 
 /* HEADER */
 header {
-  background-color: royalblue;
+  /* background-color: royalblue; */
+  background-color: #f6f5f0;
+  border-bottom :1px solid #c8c8c8;
 }
 
 header .inner{
   width: 1100px; /* 가운데 정렬 */
   height: 120px;
   margin: 0 auto; /* 가운데 정렬 */
-  background-color: orange;
+  /* background-color: orange; */
   position: relative; /* 부모  */
 }
 
@@ -31,4 +35,97 @@ header .logo{ /* 로고 높이 75px */
   bottom: 0;
   left: 0; /* 확실히 하기 위해서 부모 구조로 부터 왼쪽 0를 주어 왼쪽에 위치 시킨다.  */
   margin: auto 0; /* 윗쪽 아래 여백을 브라우저 판단으로 계산 할당 -> 그래서 높이가 얼마 인지 알려줘야 한다.  */
+   /* 잠시 사라지게  */
+}
+
+/* https://fonts.google.com/icons */
+
+header .sub-menu{
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: flex;
+
+}
+
+header .sub-menu ul.menu{
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex; /* menu 수직으로 쌓여있는 것을 수평으로 변경. */
+
+}
+
+header .sub-menu ul.menu li{
+  position: relative;
+
+}
+
+/* 구분선 만들기  */
+header .sub-menu ul.menu li::before{ /* 가상선택자  인라인 요소*/
+  content: "";
+  display: block; /* block 를 선언해서 가로 세로 사이즈를 할당할수 있도록 만든다.  */
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto ;
+}
+header .sub-menu ul.menu li:first-child::before{ /* 필요 없는 구분선 지우기  */
+  display: none; 
+
+}
+
+header .sub-menu ul.menu li a{
+  /* background-color: red; */ /* block 요소가 되면 최대한 범위내에서 잡아 주려고 하기 때문에 전체적으로 색으 빨간색 */
+  font-size: 13px;
+  padding: 11px 16px; /* a tag는 기본적으로 인라인 요소이고 사용자가 클릭시 불편하지 않게 여백을 더 주어서 클릭이 편하게 한다.   */
+  display: block;/* 레이아웃을 잡아주기 위해 범위를 잡아 주기 위해서 인라인 요소 a 태그를 block 으로 선언 . */
+  color: #656565;
+
+}
+
+header .sub-menu ul.menu li a:hover{
+  color: #000000;
+}
+
+header .sub-menu .serach{
+ /*  background-color: red; */
+  height: 34px;
+  position: relative;
+}
+
+
+header .sub-menu .serach input {
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  color: #777;
+  font-size: 12px;
+  transition: width .4s;
+}
+header .sub-menu .serach input:focus {
+  width: 190px;
+  border-color: #669900;
+
+}
+
+header .sub-menu .serach .material-icons{
+  height: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto;
+  transition: all .4s;
+
+}
+
+header .sub-menu .serach.focused .material-icons{ /*  focused className 추가 됐을시 icon 완전 투명  */
+  opacity: 0;
 }
