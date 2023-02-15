@@ -151,9 +151,9 @@ header .main-menu {
   display: flex; /* 메뉴가 수직으로 쌓여 있는데 수평으로  */
 }
 
-header .main-menu .item{
+/* header .main-menu .item{
   
-}
+} */
 
 header .main-menu .item .item__name{
   padding: 10px 20px 34px 20px;
@@ -241,3 +241,43 @@ header .badges .badge {
   cursor: pointer ;
 
 }
+
+/* VISUAL */
+.visual {
+  margin-top: 120px;/* 헤더안의 inner 높이 값과 같다.  */
+  background-image: url(../images/visual_bg.jpg);
+  background-position: center;
+}
+
+.visual .inner{
+  height: 646px; /* bg img의 높이 값  */
+  /* common .inner 선언부분도 적용이 된다.  */
+  background-color: orange;
+}
+
+.visual .title{
+  
+}
+.visual .title .btn{
+  
+}
+.visual .cup1 .image{
+  
+}
+.visual .cup1 .text{
+  
+}
+
+
+.visual .cup2 .image{
+  
+}
+
+.visual .cup2 .text{
+  
+}
+
+.visual .spoon{
+  
+}
+
