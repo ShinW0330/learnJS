@@ -199,6 +199,10 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li{  /* 첫
   cursor: pointer;
 }
 
+header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover{
+  color: #669900;
+}
+
 header .main-menu .item .item__contents .contents__texture{ /* 드롭다운시 두번쨰 층 */
   padding: 26px 0;
   font-size: 12px;/* font 속성은 기본적으로 상속이 된다. */
