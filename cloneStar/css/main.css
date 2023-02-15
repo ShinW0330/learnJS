@@ -12,6 +12,12 @@ img{ /* img 는 inline 요소 -> 위아래 값을 가질 수 없는 marggin 과 
 a {/* a 태그에 밑줄이 발생하는것을 방지 */
   text-decoration: none;
 }
+.inner { /* 모든 inner */
+  width: 1100px;
+  margin: 0 auto; /* 가운데 정렬 */
+  position: relative; /* 위치상의 부모가 되는 기준 */
+}
+
 
 /* HEADER */
 header {
@@ -20,12 +26,12 @@ header {
   border-bottom :1px solid #c8c8c8;
 }
 
-header .inner{
-  width: 1100px; /* 가운데 정렬 */
+header >.inner{ /* 모든 inner 높이가 아니라 헤더 안에 있는 자식 요소인 inner 부분만  */
   height: 120px;
-  margin: 0 auto; /* 가운데 정렬 */
+  /* width: 1100px; 공통    */
+  /* margin: 0 auto; 공통으로 뺌 */
   /* background-color: orange; */
-  position: relative; /* 부모  */
+  /* position: relative; 공통  */
 }
 
 header .logo{ /* 로고 높이 75px */
@@ -128,4 +134,83 @@ header .sub-menu .serach .material-icons{
 
 header .sub-menu .serach.focused .material-icons{ /*  focused className 추가 됐을시 icon 완전 투명  */
   opacity: 0;
+}
+
+header .main-menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1; /* 드롭 다운 된 메뉴가 다른 배너를 덮을수 있도록 하기 위해 */
+  display: flex; /* 메뉴가 수직으로 쌓여 있는데 수평으로  */
+}
+
+header .main-menu .item{
+  
+}
+
+header .main-menu .item .item__name{
+  padding: 10px 20px 34px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+header .main-menu .item:hover .item__name{ /* 아이템 네임에 hover 를 적용하는게 아니라 item 자체에 해줘야 한다. */
+  background-color: #2c2a29;
+  color: #669900;
+  border-radius: 6px 6px 0 0; /* 메뉴를 보면 윗 상단에만 레디우스가 적용 */
+}
+
+header .main-menu .item .item__contents{  
+  width: 100%; /* 드롭다운 영역을 가로를 전부 지정 */
+  position: fixed;
+  left: 0;
+  display: none; /* none 를 하면서 드롭다운 두층이 보이지 않게 된다.  */
+}
+
+header .main-menu .item:hover .item__contents{ 
+  display: block; /* item 영역에 hover가 되는 순간 드롭다운 층이 나타나게 한다.  */
+}
+
+
+header .main-menu .item .item__contents .contents__menu{ /* 드롭다운시 첫번쨰 층 */
+  background-color: #2c2a29;
+  /* height: 200px;  지정한 값에서 삭제함으로써 높이가 li에따라 auto 처리*/ 
+}
+
+header .main-menu .item .item__contents .contents__menu > ul{  /* 첫번쨰 자식 선택자를 선택 하기 위해 > 를 사용한다.  */
+  display: flex; /* ul 안하위 요소들이 수직에서 수평으로 되기 하기 위해  */
+  padding: 20px 0;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li{  /* 첫번쨰 자식 선택자를 선택 하기 위해 > 를 사용한다.  */
+  width: 220px; /* ul 안 li 간격이 220px */
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li h4{  /* 첫번쨰 자식 선택자를 선택 하기 위해 > 를 사용한다.  */
+  padding: 3px 0 12px 0 ;  /* h4 padding 값을 주어서 하위 li 메뉴이름과 간격을 둔다.  */
+  font-size: 14px;
+  color: #fff;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul > li ul li{  /* 첫번쨰 자식 선택자를 선택 하기 위해 > 를 사용한다.  */
+  padding: 5px 0 ; /* 가장 하위에 있는 메뉴들의 간격 */
+  font-size: 12px;
+  color: #999 ;
+  cursor: pointer;
+}
+
+header .main-menu .item .item__contents .contents__texture{ /* 드롭다운시 두번쨰 층 */
+  padding: 26px 0;
+  font-size: 12px;/* font 속성은 기본적으로 상속이 된다. */
+  background-image: url("../images/main_menu_pattern.jpg"); /* 반복적으로 이미지가 출력  */
+}
+header .main-menu .item .item__contents .contents__texture h4{ /* 드롭다운시 두번쨰 층 */
+  color: #999;
+  font-weight: 700;
+  /* font-size: 12px; */
+}
+header .main-menu .item .item__contents .contents__texture p{ /* 드롭다운시 두번쨰 층 */
+  color: #669900;
+  margin: 4px 0 14px;
+  /* font-size: 12px; texture  공통 부분이기에   */
 }
