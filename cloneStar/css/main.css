@@ -18,6 +18,57 @@ a {/* a 태그에 밑줄이 발생하는것을 방지 */
   margin: 0 auto; /* 가운데 정렬 */
   position: relative; /* 위치상의 부모가 되는 기준 */
 }
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: 0.4s;
+}
+.btn:hover{
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse {
+  background-color: #333;
+  color: #fff;
+}
+.btn.btn--reverse:hover {
+  background-color: transparent;
+  color: #333;
+}
+.btn.btn--brown {
+  color: #592B18;
+  border-color: #592B18;
+}
+.btn.btn--brown:hover {
+  color: #FFF;
+  background-color: #592B18;
+}
+.btn.btn--gold {
+  background-color: #D9AA8A;
+  color: #D9AA8A;
+}
+.btn.btn--gold:hover {
+  background-color: #D9AA8A;
+  color: #fff;
+}
+.btn.btn--white {
+  background-color: #fff;
+  color: #fff;
+}
+.btn.btn--gold:hover {
+  background-color: #fff;
+  color: #333;
+}
+
 
 
 /* HEADER */
@@ -31,6 +82,7 @@ header {
   /*width: auto;  position이 fixed 나 absolute 일경우 width 사용을 죄소한으로 하기 때문에 
   화면을 줄이거나 하면  정상적으로 출력이 되지 않는다. */
   width: 100%; /* 그렇기 때문에 최대한으로 설정.  */
+  z-index: 9; /* 0, 1를 주는게 아니라 일부러 큰 숫자를 주어서 header 영역이 우선적으로 되게 한다.  */
 }
 
 header >.inner{ /* 모든 inner 높이가 아니라 헤더 안에 있는 자식 요소인 inner 부분만  */
@@ -252,32 +304,48 @@ header .badges .badge {
 .visual .inner{
   height: 646px; /* bg img의 높이 값  */
   /* common .inner 선언부분도 적용이 된다.  */
-  background-color: orange;
+  /* inner 공통 선언에  position: relative; 이 적용 되어 있다.   */
+
 }
 
 .visual .title{
+  position: absolute; /* inner 공통 선언에  position: relative; 이 적용 되어 있다.   */
+  top: 88px;
+  left: -10px;
   
 }
 .visual .title .btn{
-  
+  position: absolute;
+  top: 259px;
+  left: 173px;
 }
-.visual .cup1 .image{
-  
+.visual .cup1.image{
+  position: absolute;
+  bottom: 0;
+  right: -47px;
 }
-.visual .cup1 .text{
-  
+.visual .cup1.text{
+  position: absolute;
+  top: 38px;
+  right: 171px;
 }
 
 
-.visual .cup2 .image{
-  
+.visual .cup2.image{
+  position: absolute;
+  bottom: 0;
+  right: 162px;
 }
 
-.visual .cup2 .text{
-  
+.visual .cup2.text{
+  position: absolute;
+  top: 321px;
+  right: 416px;
 }
 
 .visual .spoon{
-  
+  position: absolute;
+  bottom: 0;
+  left: 275px;
 }
 
