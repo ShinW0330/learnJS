@@ -51,3 +51,12 @@ window.addEventListener('scroll', _.throttle(function(){
 /* 
 _.throttle(함수, 시간)
 */
+
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+fadeEls.forEach(function(fadeEls, index){
+  gsap.to(fadeEls, 1,{
+    delay :(index + 1)* .7,  // 0.7  , 1.4, 2.1, 
+    opacity: 1
+  });
+
+});
