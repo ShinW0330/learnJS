@@ -456,5 +456,26 @@ header .badges .badge {
   font-size: 30px;
 }
 
+.notice .promotion{
+  height: 693px;
+  background-color: #f6f5ef;
+  position: relative;
+}
 
-
+.notice .promotion .swiper-container{
+  /*width: 2477px;  수동 계산시 */
+  width: calc(819px * 3 + 20px);
+  /* 예) width: calc(100%  - 20px); -> 브라우저가 자동으로 계산하여 편하다. */
+  height: 553px;
+  background-color: orange;
+  text-align: center;
+  font-size: 200px;
+  /* TEST 시 일정부분에서는 test 라는 문구가 가운데로 오지만 브라우저 창이 작아질수로 문구가 짤린다. 
+  그렇기 때문에 이미지라든가 컨텐츠가 무조건 가운데에 위치 하기 위해서는 
+  아래와 같이  */
+  position: absolute;
+  top: 40px;
+  left: 50%; /* container 의 전체 가로 넓이에서 왼쪽에서 50% 이동  */
+  /* margin-left: -1238.5px; 이수치는 .swiper-container 의 width 영역에서 반이다.  */
+  margin-left: calc((819px * 3 + 20px)/ -2);
+}
