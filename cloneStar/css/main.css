@@ -349,8 +349,9 @@ header .badges .badge {
   left: 275px;
 }
 .visual .fade-in{
-  opacity: 0;
+  opacity: 0; /* 투명도  */
 }
+
 /* NOTICE */
 .notice {
 
@@ -358,6 +359,7 @@ header .badges .badge {
 
 .notice .notice-line {
   position: relative;
+  /* height:30px ;  -> inner 보다 상위 요소 이기 떄문에 200px 에서 -> 30px  */
 }
 
 .notice .notice-line .bg-left {
@@ -372,12 +374,78 @@ header .badges .badge {
 .notice .notice-line .bg-right{
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0; /* left => right로  */
   width: 50%;
   height: 100%;
   background-color: #f6f5ef;
 }
 
+/* inner 를 사용하여 수치를 변경이 다른 요소들에게 영향이 갈수 있도록 만들어 두면 
+ 모든 요소를 수정할 필요 없이 inner 부분에서만 수정하게 만든다.  */
 .notice .notice-line .inner{
-  height: 62px;
+  height: 62px; /* height 속성 은 기본 auuto 이고  */
+  /* border: 2px solid red; */
+  display: flex; /* 자식요소들이 수평 정렬이 되게 하기 위해서  */
 }
+
+.notice .notice-line .inner .inner__left{
+  width: 60%;
+  height: 100%;
+  background-color: #333;
+  display: flex; /* inner__left 하위요소 수평 정렬 */
+  align-items: center; /* 수직정렬 */
+}
+.notice .notice-line .inner .inner__left h2{
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.notice .notice-line .inner .inner__left .swiper-container{
+  height: 62px;
+  background-color: orange;  
+  flex-grow: 1;
+}
+
+.notice .notice-line .inner .inner__left .notice-line__more{
+  width: 62px;
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notice .notice-line .inner .inner__left .notice-line__more .material-icons{
+  color: #fff;
+  font-size: 30px;
+} 
+.notice .notice-line .inner .inner__right{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.notice .notice-line .inner .inner__right h2{
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.notice .notice-line .inner .inner__right .toggle-promotion{
+  width: 40%;
+  height: 100%;
+  cursor: pointer ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.notice .notice-line .inner .inner__right .toggle-promotion .material-icons{
+  font-size: 30px;
+}
+
+
+

@@ -54,8 +54,9 @@ _.throttle(함수, 시간)
 
 const fadeEls = document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach(function(fadeEls, index){
+  // gsap.to(fadeEls(요소), 1(지속시간), 옵션)
   gsap.to(fadeEls, 1,{
-    delay :(index + 1)* .7,  // 0.7  , 1.4, 2.1, 
+    delay :(index + 1)* .7,  // 0.7  , 1.4, 2.1,  -> index 에 +1 를 하는 이유는 index는 0부터 시작하기 때문
     opacity: 1
   });
 
