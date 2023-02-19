@@ -65,7 +65,18 @@ fadeEls.forEach(function(fadeEls, index){
 /* SWIPER */
   //new Swiper(선택자, 옵션 );
   new Swiper('.notice-line .swiper-container', {
-    direction: 'vertical', /* 드래그 시 움직임 */
+    direction: 'vertical', /* 드래그 시 수직움직임 */
     autoplay: true, /* 자동으로 실행 */
     loop: true /* 반복 재생 여부 */
+  });
+
+  new Swiper('.promotion .swiper-container', {
+    direction: 'horizontal', /* 드래그 시 수평 움직임 -> 기본 속성*/
+    slidesPerView : 3, // 한번에 보여줄 슬라이드개수
+    spaceBetween: 10, // 슬라이드 사이 여백 
+    centeredSlides : true, // 1번 슬라이ㄷ가  가운데 
+    loop: true ,/* 반복 재생 여부 */
+    autoplay: {
+      delay :5000, /* 500 -> 0.5s , 5000 -> 5s */
+    } /* 자동으로 실행 */
   });
