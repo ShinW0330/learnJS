@@ -467,9 +467,11 @@ header .badges .badge {
   width: calc(819px * 3 + 20px);
   /* 예) width: calc(100%  - 20px); -> 브라우저가 자동으로 계산하여 편하다. */
   height: 553px;
-  background-color: orange;
+
+  /* background-color: orange 확인하기 위해 ;
   text-align: center;
-  font-size: 200px;
+  font-size: 200px; */
+
   /* TEST 시 일정부분에서는 test 라는 문구가 가운데로 오지만 브라우저 창이 작아질수로 문구가 짤린다. 
   그렇기 때문에 이미지라든가 컨텐츠가 무조건 가운데에 위치 하기 위해서는 
   아래와 같이  */
@@ -480,3 +482,31 @@ header .badges .badge {
   margin-left: calc((819px * 3 + 20px)/ -2);
 }
 
+.notice .promotion .swiper-slide{
+  opacity: 0.5;
+  transition: opacity 1s ;
+  position: relative;
+}
+
+.notice .promotion .swiper-slide-active{
+  opacity: 1;
+}
+
+.notice .promotion .swiper-slide .btn{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.swiper-pagination {
+
+}
+
+.swiper-prew {
+  
+}
+.swiper-next {
+  
+}

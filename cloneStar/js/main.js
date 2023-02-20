@@ -76,7 +76,16 @@ fadeEls.forEach(function(fadeEls, index){
     spaceBetween: 10, // 슬라이드 사이 여백 
     centeredSlides : true, // 1번 슬라이ㄷ가  가운데 
     loop: true ,/* 반복 재생 여부 */
-    autoplay: {
+    autoplay: { /* 자동으로 실행 */
       delay :5000, /* 500 -> 0.5s , 5000 -> 5s */
-    } /* 자동으로 실행 */
+    },
+    pagination:{
+      el: '.promotion .swiper-pagination',
+      clickable: true // 사용자의 페이지 번호 요소 제어 
+    },
+    navigation: {
+      prevEl: 'promotion .swiper-prew',
+      nextEl: 'promotion .swiper-next'
+    }  
+  
   });
